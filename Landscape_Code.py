@@ -61,10 +61,7 @@ while running:
                 Fish_Speed *= -1
             elif fish_choice == 2:
                 jump3 = True
-                Fish_Speed *= -1
-            # GET A LOOP TO MAKE THE FISH JUMP WITHOUT NEEDING MULTIPLE CLICKS
-            # AND MAKE SURE THE FISH SPAWNS, IT SHOULD NOT ALREADY BE EXISTING
-            
+                Fish_Speed *= -1       
     # GAME STATE UPDATES
     # All game math and comparisons happen here
         # Fish Jump 1
