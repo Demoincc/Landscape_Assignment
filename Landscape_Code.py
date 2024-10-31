@@ -100,9 +100,13 @@ while running:
     pygame.draw.polygon(screen, (19,109,21), [(0,HEIGHT), (0, 280), (280, 280), (200, HEIGHT)], width=0) #Grass 1
     pygame.draw.polygon(screen, (19,109,21), [(WIDTH,HEIGHT), (WIDTH, 280), (WIDTH-280, 280), (WIDTH-200, HEIGHT)], width=0) #Grass 2
     # Fence
-    pygame.draw.rect(screen, (92,64,51), (0,260,WIDTH,5))
+    pygame.draw.rect(screen, (92,64,51), (0,260,280,5))
+    pygame.draw.rect(screen, (92,64,51), (360,260,280,5))
     for i in range(5,WIDTH,20):
-        pygame.draw.rect(screen, (92,64,51), (i,250,10,30))
+        if i >= 280 and i <= 360:
+            continue
+        else:
+            pygame.draw.rect(screen, (92,64,51), (i,250,10,30))
     # Trees
     pygame.draw.rect(screen, (113,54,0), (Tree_Trunk_x,Tree_Trunk_y,Tree_Trunk_Width,Tree_Trunk_Height)) #Tree Trunk
     pygame.draw.polygon(screen, (1,50,32), [(Tree_Leaves_1_point1_x,Tree_Leaves_1_point1_y), (Tree_Leaves_1_point2_x,Tree_Leaves_1_point2_y), (Tree_Leaves_1_point3_x,Tree_Leaves_1_point3_y)], width=0) #Tree Leaves 1
